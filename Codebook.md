@@ -1,5 +1,5 @@
 id: subject of measurement taken
-Activity_Labels: measurement taken under as Activity_Labels
+Activity_Labels: measurement taken under as follow -WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 
 Other columns are measurement taken, listed as follow:
 tBodyAcc-mean()-X, tBodyAcc-mean()-Y, tBodyAcc-mean()-Z, tBodyAcc-std()-X, tBodyAcc-std()-Y, tBodyAcc-std()-Z      

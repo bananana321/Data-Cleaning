@@ -25,10 +25,10 @@ X_data = X_data[features_2ndCols]
 allData = cbind(subject_data, y_data, X_data)
 
 #assign column name
-colnames(allData) = c("id", "Activity_Labels", features_2ndColsNames)
-allData$Activity_Labels = factor(allData$Activity_Labels, levels = activity_labels[,1], labels = activity_labels[,2])
-allData$Subject = as.factor(allData$id)
+colnames(allData) = c("ids", "activity_labels", features_2ndColsNames)
+allData$activity_labels = factor(allData$activity_labels, levels = activity_labels[,1], labels = activity_labels[,2])
+allData$ids = as.factor(allData$ids)
 
-meltedData = melt(allData, id = c("id", "Activity_Labels"))
-tidyData = dcast(meltedData, id + Activity_Labels ~ variable, mean)
+meltedData = melt(allData, id = c("ids", "activity_labels"))
+tidyData = dcast(meltedData, ids + activity_labels ~ variable, mean)
 write.table(tidyData, "./tidy_data.txt", row.names = FALSE, quote = FALSE)
